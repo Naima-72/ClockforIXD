@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-image: url("space3.jpg");
+    background-repeat: no-repeat;
+    color: white;
+    margin-top: 100px;
+    text-align: center;
+    
+}
+
+#clock{
+    font-size: 200px;
+    margin: 20px auto 20px auto;
+    
+}
+.intro {
+    grid-area: intro;
+}
+
+.clockgeheel {
+    grid-area: clockgeheel;
+}
+
+.maanforgrid{
+    grid-area: maanforgrid;
+}
+
+#datum{
+    font-size:60px;
+    margin: 20px auto 20px auto;
+}
+
+.borderforclock {
+    width: 750px;
+    height: 400px;
+    background-color: rgba(128, 128, 128, 0.6);
+    border-style: groove;
+    border-color: rgb(97, 147, 194);
+    margin: 130px;
+    margin-left: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.text{
+    color: white;
+}
+
+.maan{
+    margin:auto;
+    overflow: hidden;
+    position: relative;
+    width: 200px;
+}
+
+#zonie.blocked, #manie.blocked{
+    display: block;
+}
+
+#zonie.none, #manie.none{
+    display: none;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1365px){
+    main { 
+        display: grid;   
+        grid-template-columns: 1fr 1fr;
+    
+        grid-template-areas: 
+          "intro clockgeheel"
+          "maanforgrid maanforgrid";    
+    }
+
+    .introtext {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .borderforclock {
+        padding-top: 30px;
+        width: 500px;
+        height: 300px;
+        margin: 20px 20px 50px 20px;
+    }
+
+    #clock {
+        font-size: 70px;
+    }
+}
+
+
+@media only screen and (min-width:1366px) and (max-width: 1919px) {
+
+    main {
+        display: grid;  
+        grid-template-columns: 1fr 1fr;
+    
+        grid-template-areas: 
+        " intro intro"
+        "clockgeheel maanforgrid";
+    }
+}
+
+  
+@media only screen and (min-width:1920px) {
+    main {
+        display: grid;  
+        grid-template-columns: 1fr 1fr;
+        
+        grid-template-areas: 
+        " intro intro"
+        "maanforgrid maanforgrid"
+        "clockgeheel clockgeheel";
+    }
+    .clockgeheel{
+        margin: 20px auto 20px auto;
+    }
+}
