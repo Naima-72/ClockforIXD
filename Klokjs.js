@@ -1,4 +1,4 @@
-
+/*voor de klok*/
 var clock = document.getElementById('clock');
 
 function hexClock (){
@@ -26,6 +26,29 @@ function hexClock (){
     
 }
 
+var id = null;
+function myMove() {
+  var elem = document.getElementById("animation");
+  var pos = 0;
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+            if (pos == 350) {
+
+                clearInterval(id);
+            } 
+
+            else {
+                pos++;
+                elem.style.top = pos + '0px';
+                elem.style.left = pos + '0px';
+            }
+    }
+}
+
+
+
+/*voor de animatie verandering dag > nacht*/
 hexClock();
 setInterval(hexClock, 1000);
 
@@ -55,3 +78,11 @@ var yearName = datumVanNu.getFullYear();
 var datum = document.getElementById('datum');
 datum.innerHTML = datumCijfers + '-' + dayName + '-' + yearName;
 
+
+
+
+
+
+
+/*liedje waarom ik elon musk haat:
+https://www.youtube.com/watch?v=KqyXvMrQDk8&ab_channel=saltysoo */
